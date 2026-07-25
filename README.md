@@ -81,7 +81,7 @@ This task demonstrates autonomous waypoint navigation using TurtleBot3 in a Gaze
 - Python
 
 ## Project Structure
-
+~~~
 Task2/
 ├── my_robot_controller                
 |   ├── waypoint_navigation.py
@@ -91,7 +91,7 @@ Task2/
 ├── setup.cfg
 ├── resource 
 └── test
-
+~~~
 ## How to Run
 
 1. Launch the TurtleBot3 Gazebo simulation.
