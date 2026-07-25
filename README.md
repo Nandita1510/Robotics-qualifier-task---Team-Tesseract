@@ -1,3 +1,47 @@
+# Track A — Robotics Qualifier: TurtleBot3 Navigation (ROS 2 + Nav2)
+
+Implements both qualifier tasks:
+
+- **Task 1 — ROS2 Setup & TurtleBot Navigation**: point-to-point navigation
+  to user-defined goals using the Nav2 stack.
+- **Task 2 — Repeated Waypoint Navigation**: loops the robot through a
+  10-point waypoint circuit continuously (or for N cycles) without manual
+  intervention.
+
+## Meets Evaluation Criteria
+
+- ✅ Simulation launches successfully (`bringup_sim.launch.py`)
+- ✅ Robot navigates to ≥2 user-defined goals (`goal_navigation.py`)
+- ✅ Continuous waypoint loop with stable localization (`waypoint_navigation.py`)
+
+## Simulation World
+
+This project uses the stock TurtleBot3 Gazebo world (`turtlebot3_world.launch.py`,
+shipped with `turtlebot3_simulations`) — no custom `.world`/`.sdf` file is
+included in this repo. Waypoint coordinates in `waypoint_navigation.py` are
+tuned specifically for this world's free space.
+
+## Requirements
+
+- Ubuntu 22.04 (or a Docker container running Ubuntu 22.04, if your host
+  OS is newer — e.g. Ubuntu 24.04)
+- ROS 2 Humble
+- Gazebo (classic) + `turtlebot3`, `turtlebot3_simulations`,
+  `turtlebot3_navigation2`, `nav2_bringup`, `nav2_simple_commander`
+
+Install the TurtleBot3 + Nav2 dependencies if not already present:
+
+```bash
+sudo apt update
+sudo apt install -y \
+  ros-humble-turtlebot3 \
+  ros-humble-turtlebot3-simulations \
+  ros-humble-turtlebot3-navigation2 \
+  ros-humble-nav2-bringup \
+  ros-humble-nav2-simple-commander
+```
+
+
 # Task 1 – Goal-Based Navigation using Nav2
 
 ## Overview
@@ -15,14 +59,7 @@ This project demonstrates goal-based autonomous navigation of a TurtleBot3 robot
 
 ---
 
-## Software & Tools
 
-- Ubuntu 22.04
-- ROS 2 Humble
-- TurtleBot3
-- Gazebo
-- RViz2
-- Nav2 Navigation Stack
 
 ---
 
@@ -69,16 +106,6 @@ This task demonstrates autonomous waypoint navigation using TurtleBot3 in a Gaze
 - Sequential waypoint traversal
 - Goal status monitoring
 - ROS2 Humble compatible
-
-## Technologies Used
-
-- Ubuntu 22.04
-- ROS2 Humble
-- TurtleBot3
-- Gazebo
-- RViz2
-- Nav2
-- Python
 
 ## Project Structure
 ~~~
