@@ -132,3 +132,10 @@ Task2/
 The robot successfully navigates to each waypoint while avoiding obstacles using the Nav2 navigation framework.
 
 ---
+
+## Notes
+
+- The waypoint coordinates in `waypoint_navigation.py` are tuned for the
+  free space in the stock `turtlebot3_world` Gazebo world. If you swap
+  worlds, update `WAYPOINTS` accordingly.
+- Tested with `TURTLEBOT3_MODEL=burger`.
